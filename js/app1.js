@@ -22,3 +22,18 @@ function anterior(e) {
     }
     imagem.setAttribute("src", `img/foto${i}.jpg`);
 }
+
+function selecionar(e) {
+    e.preventDefault();
+    i = cbbox.value;
+    imagem.setAttribute("src", `img/foto${i}.jpg`);
+}
+ 
+const cbbox = document.getElementById("combobox");
+cbbox.addEventListener("change", selecionar);
+
+const opacidade = document.getElementById("opacidade");
+opacidade.addEventListener("input", function() {
+    imagem.style.opacity = opacidade.value;
+});0
+
